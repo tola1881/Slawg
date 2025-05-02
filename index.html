@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="email-form">
+    <h2>چوونەژوورەوە</h2>
+    <input type="email" id="email" placeholder="ئیمەیڵ" required>
+    <button onclick="sendCode()">ناردنی کۆد</button>
+  </div>
+
+  <div class="container" id="code-form" style="display: none;">
+    <h2>کۆدی نێردرا</h2>
+    <input type="text" id="verification-code" placeholder="کۆد" required>
+    <button onclick="verifyCode()">دڵنیاکردنەوە</button>
+  </div>
+
+  <div class="container" id="dashboard" style="display: none;">
+    <h2>زیادکردنی خەرجی</h2>
+    <form id="expense-form">
+      <input type="text" id="expense-name" placeholder="ناوی خەرجی" required>
+      <input type="number" id="expense-amount" placeholder="بڕ" required>
+      <input type="date" id="expense-date" required>
+      <button type="submit">زیادکردن</button>
+    </form>
+    <ul id="expense-list"></ul>
+    <div class="total">کۆی گشتی: <span id="total-amount">0</span> دینار</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
